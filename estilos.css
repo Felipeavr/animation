@@ -102,8 +102,8 @@ h1 {
 .fantasma {
     height: 100px;
     width: calc(900px/9);
-    background: url('images/animacion/fantasmas.png');
-    animation: fantasma 2s steps(9) infinite, moverf 48s ;
+    background: url('images/animacion/fantasmasd.png');
+    animation: fantasma 2s steps(9) infinite, moverf 40s ;
     animation-delay: 5s;
     transform: scale(1);
     margin-top: 0px;
@@ -121,8 +121,12 @@ h1 {
     }
 
     50%{
-        left: 120%;
+        left: 110%;
         top: 200px ;
+    }
+
+    51%{
+        left: 105%;
     }
    
     100%{
@@ -142,7 +146,7 @@ h1 {
     height: 100px;
     width: calc(400px/4);
     background:url('images/animacion/pacman.png');
-    animation: pacman .5s steps(4) infinite, mover 51s 5s;
+    animation: pacman .5s steps(4) infinite, mover 41s 5s;
    
     transform: scale(.9);
     position: absolute;
@@ -166,9 +170,12 @@ h1 {
         top: 0px;
     }
     50%{
-        left: 110%;
+        left: 100%;
         top: 200px;
         transform: rotate(180deg);
+    }
+    51%{
+        left: 110%;
     }
     100%{
            
@@ -455,7 +462,7 @@ z-index: 20;
     }
 
     to {
-        left: 50%;
+        left: 30%;
     }
 }
 
@@ -503,10 +510,11 @@ z-index: 20;
 
     20% {
         top: 38%;
+        opacity: 1;
     }
 
     40% {
-        opacity: 1;
+        
         top:39%
     }
 
