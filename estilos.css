@@ -87,8 +87,95 @@ body {
    
 }
 
+.letter {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
 h1 {
-    color:white;
+    color:rgb(65, 174, 236);
+    padding: 15px 0;
+}
+
+.fantasma {
+    height: 100px;
+    width: calc(900px/9);
+    background: url('images/animacion/fantasmas.png');
+    animation: fantasma 2s steps(9) infinite, moverf 48s ;
+    animation-delay: 5s;
+    transform: scale(1);
+    margin-top: 0px;
+    left: 400px;
+    position: absolute;
+
+}
+@keyframes moverf {
+    0%{
+        left: 400px;
+    }
+
+    49%{
+        top: 0px;
+    }
+
+    50%{
+        left: 120%;
+        top: 200px ;
+    }
+   
+    100%{
+        left: -200px;
+        top: 200px ;
+    }
+} 
+@keyframes fantasma {
+    from{
+        background-position: 0px;
+    }
+    to{
+        background-position:900px;
+    }
+}
+.pacman {
+    height: 100px;
+    width: calc(400px/4);
+    background:url('images/animacion/pacman.png');
+    animation: pacman .5s steps(4) infinite, mover 51s 5s;
+   
+    transform: scale(.9);
+    position: absolute;
+    left: 300px;
+}
+@keyframes pacman {
+    from{
+        background-position: 0px;
+
+    }
+    to{
+        background-position: 400px;
+    }
+}
+@keyframes mover {
+    0%{
+        left: 300px;
+    }
+    49%{
+        transform: rotate(0deg);
+        top: 0px;
+    }
+    50%{
+        left: 110%;
+        top: 200px;
+        transform: rotate(180deg);
+    }
+    100%{
+           
+        top: 200px;
+        transform: rotate(180deg);
+        left: -100px;
+    }
 }
 
 .globos
