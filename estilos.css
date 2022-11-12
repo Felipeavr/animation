@@ -615,9 +615,21 @@ animation-delay: 10s;
         bottom: 40%;
     }
 
+    77%{
+        transform: scale(1);
+        bottom: 40%;
+    }
+
+    90%{
+        transform: scale(.2);
+        bottom: 40%;
+    }
+
     100% {
         bottom: 100%;
         opacity: 1;
+        transform: scale(0);
+      
     }
 }
 
@@ -756,8 +768,8 @@ animation-delay: 10s;
 
 .duck {
     height: 268px;
-    width: calc(1600px/8);
-    background: url('images/animacion/pajaros.png');
+    width: calc(2000px/8);
+    background: url('images/animacion/pato.png');
     top: 0px;
     margin-left: -300px;
     animation: pato 1s steps(8) infinite, vuelo 60s;
@@ -770,7 +782,7 @@ animation-delay: 10s;
         background-position: 0px;
     }
     to {
-        background-position: 1600px;
+        background-position: 2000px;
     }
 }
 @keyframes vuelo {
