@@ -500,10 +500,10 @@ h1 {
 .pajaroc {
     width: 200px;
     height: 150px;
-    position: relative;
-    margin: -500px auto auto -200px;
+    position: absolute;
+    margin: auto auto auto auto;
     transform: scale(1);
-    animation: pajaro 60s;
+    animation: pajaro 60s forwards;
     z-index: 99;
     
 }
@@ -545,18 +545,18 @@ z-index: 20;
     0%{
        transform: rotate(0deg);
        transform: scale(0);
-       left: 100%;
+       left: 80%;
       
     }
     85%{
-        left: 50%;
+        left: 40%;
     }
    
 
     100% {
         transform: rotate(0deg);
         transform: scale(1);
-        left: 0%;
+        left: -10%;
      }
 
     
@@ -1102,6 +1102,7 @@ animation-delay: 10s;
     transform: scale(.8);
     left: -20%;
     top: 0%;
+   
  }
 
    @keyframes esoestodo {
