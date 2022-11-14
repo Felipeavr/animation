@@ -467,8 +467,8 @@ h1 {
 .montanas img {
     width: auto;
     height: auto;
-    position: relative;
-    bottom: -400px;
+    position: fixed;
+    bottom: 0px;
     left: -200px;
     animation: montanas 15s 20s linear forwards;
     z-index: 1;
