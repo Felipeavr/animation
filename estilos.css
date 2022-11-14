@@ -468,6 +468,7 @@ h1 {
     width: auto;
     height: auto;
     position: fixed;
+   
     bottom: 0px;
     left: -200px;
     animation: montanas 15s 20s linear forwards;
@@ -549,7 +550,7 @@ z-index: 20;
       
     }
     85%{
-        left: 40%;
+        left: 38%;
     }
    
 
@@ -952,9 +953,11 @@ animation-delay: 10s;
 @keyframes vuelo {
     from{
         margin-left: 110%;
+        
     }
     to {
         margin-left: -300px;
+        top: 20%;
         
     }
 }
@@ -1187,6 +1190,7 @@ animation-delay: 10s;
     background: url('images/animacion/redbird.png');
     animation:redbird 1s steps(16) infinite, mobird 10s linear forwards;
     position: absolute;
+    top: 0;
 
 }
 @keyframes redbird {
@@ -1200,9 +1204,11 @@ animation-delay: 10s;
 @keyframes mobird {
     from{
         left: 0;
+        top:0;
     }
     to{
         left:100%;
+        top:40%;
     }
 }
 
