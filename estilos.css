@@ -624,7 +624,7 @@ z-index: 20;
 }
 
 .nube2 {
-    position: absolute;
+    position: fixed;
     bottom: -30%;
     animation: nube2 60s linear forwards;
 }
