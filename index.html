@@ -13,6 +13,38 @@
     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
     <div class="contenedor">
+
+      
+      
+
+        <div class="scene">
+            <script>
+                function stars(){
+                    let count = 500;
+                    let scene = document.querySelector('.scene');
+                    let i = 0;
+                    while(i<count){
+                        let star = document.createElement("i");
+                        let x = Math.floor(Math.random() * window.innerWidth);
+                        let y = Math.floor(Math.random() * window.innerWidth);
+                        let duration = Math.random() * 10;
+                        let size = Math.random() * 2;
+    
+                        star.style.left = x + 'px';
+                        star.style.top = y + 'px';
+                        star.style.width = 1+size+'px';
+                        star.style.height = 1+size+'px';
+    
+                        scene.appendChild(star);
+                        i++
+                    }
+                }
+                stars();
+            </script>
+
+
+
+        </div>
       
    <div class="letter">
     <h1>Animaciones CSS3</h1>
@@ -84,6 +116,7 @@
     
 </div>
 
+<div class="ovni"></div>
 <div class="humo"></div>
 <div class="circulo"></div>
 <div class="mariposa"></div>
@@ -92,8 +125,21 @@
 <div class="moon"></div>
 <div class="redbird"></div>
 <div class="luciernaga"></div>
+<div class="luci1"></div>
+<div class="luci2"></div>
 <div class="cohete"></div>
 <div class="sol"></div>
+<div class="pelota"></div>
+<div class="bat">
+    
+</div>
+<div class="espan">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
 </div>
 </div>
 

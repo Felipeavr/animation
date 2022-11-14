@@ -62,6 +62,107 @@ body {
     }  */
 }
 
+.scene i {
+    
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    animation: estrellas 25s 30s linear forwards, movestar 30s 30s linear forwards;
+    opacity: 0;
+}
+
+@keyframes estrellas {
+    0%{
+        opacity: 0;
+      
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+@keyframes movestar {
+    0%{
+       
+        transform: translateY(0);
+    }
+    100%{
+      
+        transform: translateY(-50px);
+    }
+}
+
+span{
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    width: 4px;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,1);
+    animation: fugaz 2s 45s linear 1;
+    
+    
+}
+span::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,rgb(255, 255, 255),transparent);
+}
+
+@keyframes fugaz {
+    0%{
+        transform: rotate(315deg)translateX(0);
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(315deg)translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+span:nth-child(1)
+{
+    top: -10px;
+    right: 15%;
+    left: initial;
+    animation-delay: 48s;
+    animation-duration: 2s;
+}
+span:nth-child(2)
+{
+    top: -10px;
+    right: 10px;
+    left: initial;
+    animation-delay: 53s;
+    animation-duration: 1s;
+}
+span:nth-child(3)
+{
+    top: -10px;
+    right: 80%;
+    left: initial;
+    animation-delay: 57s;
+    animation-duration: 2s;
+}
+
+
 .ring.conteiner {
     width: 100vw;
     height: 100vh;
@@ -272,7 +373,7 @@ h1 {
     bottom: 0;
     left: 5%;
     transform: translate(0px,200px);
-    animation: globoA 12s infinite;
+    animation: globoA 12s 1;
     z-index: 4;
     
 }
@@ -290,10 +391,10 @@ h1 {
 .globoverde img {
   width: 35px;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 50%;
   transform: translate(0,0);
-  animation: globoverde 20s infinite;
+  animation: globoverde 20s 1 linear;
   z-index: 3;
 }
 
@@ -862,9 +963,9 @@ animation-delay: 10s;
     height: 180px;
     width: calc(1200px/6);
     background: url('images/animacion/humo.png');
-    animation: humo 1s 5s steps(6),
-               humo1 1s 14.5s steps(6),
-               humo2 1s 25s steps(6);
+     animation: /*humo 1s 5s steps(6), */
+               humo1 1s 14.5s steps(6);
+               /* humo2 1s 25s steps(6); */
    
     right: 100%;
     z-index: 150;
@@ -1028,7 +1129,7 @@ animation-delay: 10s;
        height: 100px;
        background-image: url('images/luna.png');
        background-size: contain;
-
+      
         position: absolute;
         right: 300px;
         bottom: -100px;
@@ -1059,6 +1160,7 @@ animation-delay: 10s;
     height: 100px;
     left: 15%;
     top: 10%;
+    background: url('images/sol.png');
     position: absolute;
     animation: sol 38s linear forwards;
 }
@@ -1125,10 +1227,10 @@ animation-delay: 10s;
     animation: ejey 20s 30s ease-in-out ;
     z-index: 155;
     left: -20px;
-    box-shadow: rgba(245, 221, 4,) 0px 22px 70px 4px;;
-  
-
+    box-shadow: rgba(245, 221, 4,) 0px 22px 70px 4px;
 }
+
+
 
 @keyframes ejex {
     0%{
@@ -1181,6 +1283,45 @@ animation-delay: 10s;
         bottom:-800px;
     }
 }
+
+
+.luci1{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fffb08;
+    position: absolute;
+    z-index: 30;
+   animation: luci1X 30s ease-in-out;
+}
+
+
+@keyframes luci1X {
+   
+}
+  
+
+@keyframes luci1Y {
+    0%{
+        transform: translateY(0px);
+    }
+   
+    
+    
+    30%{
+        transform: translateY(200px);
+    }
+    
+    60%{
+        transform: translateY(-100px);
+    }
+
+}
+
+
+
+
+
 
 .cohete {
     width: 50px;
@@ -1246,6 +1387,112 @@ animation-delay: 10s;
     }
 }
 
+.pelota {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: #e91ed8;
+    border: 1px solid white; */
+    animation: pelotaX 20s 5s ease-in-out;
+}
+
+.pelota::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #e91ed8;
+    border: 1px solid white;
+    animation: pelotaY 20s 5s ease-in-out;
+
+}
+
+@keyframes pelotaX {
+    0%{
+        transform: translateX(0px);
+    }
+    
+ 
+    50%{
+        transform: translateX(1900px);
+    }
+
+    100%{
+        transform: translateX(0px); 
+    }
+}
+
+@keyframes pelotaY {
+    0%{
+        transform: translateY(0px);
+    }
+    12.5%{
+        transform:translateY(-200px);
+    }
+
+    25%{
+        transform:translateY(200px); 
+    }
+    37.5%{
+        transform: translateY(-200px); 
+    }
+    
+    62.5%{
+        transform: translateY(400px);
+    }
+    75%{
+       transform: translateY(0px); 
+    } 
+    87.5%{
+        transform: translateY(200px); 
+    }
+    100%{
+        transform: translateY(0px); 
+    }
+}
+
+.bat {
+    width: calc(3151px/9);
+    height: 351px;
+    position: absolute;
+    background: url('images/animacion/murcielago.png');
+    animation: bat 1s steps(9) infinite, batm 15s 40s linear forwards;
+    transform: scale(.1);
+    bottom: 0px;
+  
+   
+}
+
+@keyframes bat {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 3151px;
+    }
+}
+@keyframes batm {
+    0%{
+        bottom: 0;
+        left:55%;
+    }
+    40%{
+        bottom: 300px;
+       
+    } 
+    60%{
+        bottom: 300px;
+        transform:scale(.1) ;
+    } 
+    100%{
+        transform:scale(.7) rotate(0);
+        bottom: 900px;
+        left: 55%;       
+    }
+
+}
 
 
  /*
