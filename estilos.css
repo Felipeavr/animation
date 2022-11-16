@@ -1110,7 +1110,7 @@ animation-delay: 10s;
     position: absolute;
     transform: scale(.8);
     left: -20%;
-    top: 0%;
+    top: -20%;
    
  }
 
@@ -1118,10 +1118,12 @@ animation-delay: 10s;
     from{
         width: 0px;
         left: 20%;
+        top:0;
     }
     to{
         width: 400px;
         left: 25%;
+        top:0;
     }
   }
 
