@@ -3,39 +3,39 @@
     padding: 0;
    
 }
-
 body {
- 
+
     /* background: rgb(210,245,250); */
-    
-      background: linear-gradient(45deg,rgb(127, 211, 245),rgb(127, 211, 245),rgb(47, 139, 245),rgb(227, 128, 247),rgb(81, 3, 117));
-      background-size: 500%;
-      background-position: right;
-     /* background: linear-gradient(90deg, rgba(210,245,250,1) 0%, rgba(17,172,209,1) 100%, rgba(5,196,223,1) 100%);  */
+
+    background: linear-gradient(45deg, rgb(127, 211, 245), rgb(127, 211, 245), rgb(47, 139, 245), rgb(227, 128, 247), rgb(81, 3, 117));
+    background-size: 500%;
+    background-position: right;
+    /* background: linear-gradient(90deg, rgba(210,245,250,1) 0%, rgba(17,172,209,1) 100%, rgba(5,196,223,1) 100%);  */
     /* display: flex;
     justify-content: center;
     align-items: center; */
-   animation: cielo 100s ease-in-out alternate ;
+    animation: cielo 100s ease-in-out alternate;
 
 }
 
-
-
 @keyframes cielo {
-    0%{
+    0% {
         background-position: left;
     }
-    40%{
-        background-position: right;
-    }
-    60%{
+
+    40% {
         background-position: right;
     }
 
-    80%{
+    60% {
         background-position: right;
     }
-    100%{
+
+    80% {
+        background-position: right;
+    }
+
+    100% {
         background-position: right;
     }
 
@@ -246,6 +246,7 @@ span:nth-child(3)
 h1 {
     color:rgb(65, 174, 236);
     padding: 15px 0;
+    z-index: 300;
 }
 
 .fantasma {
@@ -460,24 +461,25 @@ h1 {
     }
 }
 
-.montanas
+/* .montanas
 {
     width: 100%
-}
+} */
 
-.montanas img {
-    width: auto;
-    height: auto;
+.montanas {
+    width: 100%;
+    height: 100%;
     position: fixed;
-   
+    background-image: url('images/mountain.png');
+    background-position: left bottom;
+    background-size: 130%;
+    background-repeat: no-repeat;
+
     bottom: 0px;
-    left: -200px;
+    /* left: -200px; */
     animation: montanas 15s 20s linear forwards;
     z-index: 1;
   
- 
- 
-
 }
 
 @keyframes montanas {
@@ -631,7 +633,7 @@ z-index: 20;
 .nube2 {
     position: fixed;
     bottom: -30%;
-    animation: nube2 60s linear forwards;
+    animation: nube2 70s linear forwards;
 }
 @keyframes nube2 {
     from{
@@ -639,6 +641,29 @@ z-index: 20;
     }
     to{
         right: 0px;
+    }
+}
+
+.nube3 {
+    width: 200px;
+    position: absolute;
+    left: 20%;
+}
+.nube4 {
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    animation: nube4 90s linear;
+    z-index: 73;
+}
+@keyframes nube4 {
+    from{
+        left: 80%;
+        top: 100px;
+    }
+    to{
+        left: 60%;
+        top: 100px;
     }
 }
 
@@ -764,16 +789,19 @@ animation-delay: 10s;
     opacity: 0;
     animation: iron2 5s;
     animation-delay: 30s;
+
 }
 
 @keyframes iron2 {
     0%{
         bottom: 0;
         opacity: 1;
+        transform: scale(0);
     }
      
     30%{
         bottom:40%;
+        transform: scale(1);
     }
 
     70%{
@@ -846,11 +874,11 @@ animation-delay: 10s;
     width: calc(1750px/7);
     background: url('images/animacion/8en1.png');
     animation: persona .5s steps(7) infinite,
-               adelante 40s;
+               adelante 60s ;
  position: absolute;
  bottom: -50px;
  z-index: 101;
- margin-left: calc(100% + 250px);
+ left: calc(100% + 250px);
     
               
    
@@ -862,14 +890,30 @@ animation-delay: 10s;
 
 @keyframes adelante {
     0%{
-        margin-left: -250px;
+        left: -250px;
         bottom: -100px;
     }
-    50%{
-        bottom: -50px;  
+
+    10%{
+      
+        bottom: -60px;
     }
+
+    20%{
+        bottom: -20px;  
+    }
+
+    36%{
+        bottom: -100px;
+    }
+
+    
+    50%{
+        bottom: -20px;
+    }
+
     100% {
-        margin-left: calc(100% + 250px);
+        left: calc(100% + 250px);
         bottom: -100px; 
     }
 }
@@ -1103,7 +1147,7 @@ animation-delay: 10s;
     height: 154px;
     background-color: rgb(178, 23, 184);
     background: url('images/animacion/esoestodo.png');
-    animation: esoestodo 5s 45s, desa 5s 50s forwards;
+    animation: esoestodo 5s 60s, desa 5s 65s forwards;
     animation-fill-mode: forwards;
     position: absolute;
     transform: scale(.8);
@@ -1138,13 +1182,14 @@ animation-delay: 10s;
 .moon {
        width: 100px;
        height: 100px;
-       background-image: url('images/luna.png');
+       background-image: url('images/moon.png');
        background-size: contain;
       
         position: absolute;
         right: 300px;
         bottom: -100px;
-        animation: moon 25s 30s linear forwards;
+        animation: moon 35s 30s linear forwards;
+      
 
 }
 @keyframes moon {
@@ -1171,7 +1216,7 @@ animation-delay: 10s;
     height: 100px;
     left: 0;
     top: 0;
-    background-image: url('images/sol2.png');
+    background-image: url('images/sun.png');
     background-size: cover;
     position: absolute;
     animation: sol 38s linear forwards;
@@ -1189,7 +1234,7 @@ animation-delay: 10s;
 
     }
     100%{
-        top: 60%;
+        top: 70%;
         left: 15%;
     }
 
@@ -1415,6 +1460,8 @@ animation-delay: 10s;
     }
 }
 
+
+
 .pelota {
     width: 25px;
     height: 25px;
@@ -1430,19 +1477,28 @@ animation-delay: 10s;
 
 .pelota::before {
     content: '';
-    width: 70px;
-    height: 50px;
+    width: calc(700px/5);
+    height: 72px;
     position: absolute;
-    background-image:url('images/ovni.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background:url('images/ovnispt2.png');
+    
     border: 0px solid white;
-    animation: pelotaY 20s 30s ease-in-out forwards;
+    animation: ovnispt 3s steps(5) infinite, pelotaY 20s 30s ease-in-out forwards;
     top: 200px;
     left: -100px;
     z-index: 123;
 
+
+}
+@keyframes ovnispt {
+    from{
+        background-position: 700px;
+    }
+    
+ 
+    to{
+       background-position: 0px;
+    }
 }
 
 @keyframes pelotaX {
@@ -1456,23 +1512,24 @@ animation-delay: 10s;
     }
 
     100%{
-        transform: translateX(1000px); 
+        transform: translateX(966px); 
     }
 }
 
 @keyframes pelotaY {
     0%{
-        transform: translateY(100px);
+        transform: translateY(100px)scale(.5);
+        
     }
     12.5%{
-        transform:translateY(-200px);
+        transform:translateY(-200px)scale(.5);
     }
 
     25%{
-        transform:translateY(200px); 
+        transform:translateY(200px)scale(.5); 
     }
     37.5%{
-        transform: translateY(-200px); 
+        transform: translateY(-200px)scale(.5); 
     }
     
     /* 62.5%{
@@ -1488,32 +1545,32 @@ animation-delay: 10s;
         transform: translateY(0px); 
     } */
     60%{
-        transform: translateY(400px)scale(2);
+        transform: translateY(400px)scale(.8);
     }
     70%{
-       transform: translateY(0px); 
+       transform: translateY(0px)scale(.5); 
     } 
     80%{
-        transform: translateY(200px); 
+        transform: translateY(200px)scale(.5); 
     }
     90%{
-        transform: translateY(0px)scale(2); 
+        transform: translateY(0px)scale(1); 
     }
     100%{
-        transform: translateY(0px)scale(2); 
+        transform: translateY(0px)scale(1); 
     }
 }
 .rayo {
     width: 200px;
-    height: 550px;
+    height: 60%;
     /* clip-path: polygon(38% 0, 59% 0, 59% 0, 37% 0); */
     clip-path: polygon(38% 0, 59% 0, 100% 100%, 0 100%);
         /* clip-path: polygon(30% 0%, 60% 0%, 100% 99.4%, 90% 99.5%, 80% 99.6%, 70% 99.7%, 60% 99.8%, 50% 99.8%, 40% 99.7%, 30% 99.6%, 20% 99.5%,10% 99.4%,0% 99.3%); */
-    animation: rayo 7s 52s linear forwards;
+    animation: rayo 12s 52s linear forwards;
     background: rgb(230, 226, 7,.5);
     position: absolute;
     left: 740px;
-    top: 315px;
+    top: 32.8%;
     z-index: 122;
     opacity: 0;
 }
@@ -1544,9 +1601,9 @@ animation-delay: 10s;
     clip-path: ellipse(50% 8% at 50% 51%);
     position: absolute;
     left: 740px;
-    top: 840px;
+    top: 860px;
     z-index: 113;
-    animation : elipse 7s 52s linear; 
+    animation : elipse 12s 52s linear; 
     transform: scale(0);
 } 
 
@@ -1676,6 +1733,56 @@ animation-delay: 10s;
         transform: scale(1);
         right: 10%;
         bottom: 600px;
+    }
+}
+
+.naruto {
+    width: calc(1400px/10);
+    height: 200px;
+    background: url('images/animacion/naruto.png');
+    animation: naruto 1s steps(10) infinite, movenaruto 20s 44s linear forwards;
+    position: absolute;
+    transform: scale(.3);
+    bottom: -15px;
+    left: -100px;
+    z-index: 77;
+}
+
+@keyframes naruto {
+    from{
+        background-position: 1400px;
+    }
+    to{
+        background-position: 0px;
+    }
+}
+@keyframes movenaruto {
+    0%{
+        left: -50px;
+    }
+    60%{
+        left: 755px;
+    }
+    65%{
+       transform: rotate(0deg)scale(.3);
+       bottom:-5px;
+    }
+
+    90%{
+        transform: rotate(1080deg)scale(.3);
+        bottom:545px;
+        left:760px;
+
+    }
+
+    98%{
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(1080deg)scale(.3);
+        bottom:545px;
+        left:760px;
+        opacity: 1;
     }
 }
 
