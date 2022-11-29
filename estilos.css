@@ -1775,14 +1775,14 @@ animation-delay: 10s;
 
     }
 
-    98%{
+    99%{
         opacity: 1;
     }
     100% {
         transform: rotate(1080deg)scale(.3);
         bottom:545px;
         left:760px;
-        opacity: 1;
+        opacity: 0;
     }
 }
 
