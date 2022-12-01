@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
    
 }
 body {
@@ -397,7 +398,7 @@ h1 {
   left: 50%;
   transform: translate(0,0);
   animation: globoverde 20s 1 linear;
-  z-index: 3;
+  z-index: 9;
 }
 
 @keyframes globoverde {
@@ -415,7 +416,7 @@ h1 {
     position: absolute;
     right: -350px;
     transform: translateY(300px);
-    z-index: 2;
+    z-index: 7;
     animation: avioneta 30s;
     animation-delay: 10s;
 }
@@ -470,7 +471,7 @@ h1 {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-image: url('images/mountain.png');
+    background-image: url('images/mountaincom.png');
     background-position: left bottom;
     background-size: 130%;
     background-repeat: no-repeat;
@@ -478,8 +479,21 @@ h1 {
     bottom: 0px;
     /* left: -200px; */
     animation: montanas 15s 20s linear forwards;
-    z-index: 1;
+    z-index: 3;
   
+}
+
+.frente {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('images/mountaintp2.png');
+    background-position: left bottom;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    z-index: 399;
+    animation: montanas 15s 20s linear forwards;
 }
 
 @keyframes montanas {
@@ -508,7 +522,8 @@ h1 {
     top: 10%;
     left: 110%;
     transform: scale(1);
-    animation: pajaro 60s linear forwards;
+     animation: pajaro 60s linear forwards;
+    
     z-index: 99;
 
     
@@ -612,12 +627,13 @@ z-index: 20;
 }
 
 .nube1 {
-    width: 300px;
-    left: 30%;
-    top: 50px;
+    width: 40%;
+    left: 20%;
+    top: 20%;
     position: absolute;
     animation: nube1 90s linear forwards ;
-    z-index: 4;
+    z-index: 23;
+   
 }
 
 @keyframes nube1 {
@@ -631,9 +647,18 @@ z-index: 20;
 }
 
 .nube2 {
-    position: fixed;
-    bottom: -30%;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    /* background-color: #fffb08; */
+    background-image: url('images/nube2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
     animation: nube2 70s linear forwards;
+    bottom: 15%;
+    z-index: 1;
+    
 }
 @keyframes nube2 {
     from{
@@ -645,20 +670,20 @@ z-index: 20;
 }
 
 .nube3 {
-    width: 200px;
+    width: 40%;
     position: absolute;
-    left: 20%;
+    left: 10%;
 }
 .nube4 {
-    width: 200px;
+    width: 35%;
     position: absolute;
-    left: 80%;
+    left: 60%;
     animation: nube4 90s linear;
-    z-index: 73;
+ 
 }
 @keyframes nube4 {
     from{
-        left: 80%;
+        left: 70%;
         top: 100px;
     }
     to{
@@ -789,6 +814,7 @@ animation-delay: 10s;
     opacity: 0;
     animation: iron2 5s;
     animation-delay: 30s;
+    z-index: 2;
 
 }
 
@@ -817,15 +843,19 @@ animation-delay: 10s;
         bottom: 40%;
     }
 
-    90%{
-        transform: scale(.2);
-        bottom: 40%;
+    85%{
+        transform: translate(600px,-300px)rotate(45deg) scale(.5);
     }
 
+    90%{
+        transform: translate(600px,-300px)rotate(-45deg) scale(.5);
+        bottom: 40%;
+    }
+  
     100% {
         bottom: 100%;
         opacity: 1;
-        transform: scale(0);
+        transform: scale(.2);
       
     }
 }
@@ -838,6 +868,7 @@ animation-delay: 10s;
     opacity: 0;
     animation: ojos 5s;
     animation-delay: 30s;
+    z-index: 22;
 }
 
 @keyframes ojos {
@@ -1019,7 +1050,7 @@ animation-delay: 10s;
                /* humo2 1s 25s steps(6); */
    
     right: 100%;
-    z-index: 150;
+    z-index: 403;
     position: absolute;
    
   
@@ -1186,9 +1217,10 @@ animation-delay: 10s;
        background-size: contain;
       
         position: absolute;
-        right: 300px;
+        right: 17%;
         bottom: -100px;
         animation: moon 35s 30s linear forwards;
+        z-index: 0;
       
 
 }
@@ -1198,16 +1230,16 @@ animation-delay: 10s;
         /* right: 300px; */
     }
     50% {
-      bottom: 600px;
+      bottom: 60%;
       /* right: 100px; */
     }
     80%{
-        bottom: 600px;
+        bottom: 60%;
         /* right: 100px; */
     }
     100%{
         /* right: -100px; */
-        bottom: 600px ;
+        bottom: 60% ;
     }
 }
 
@@ -1216,25 +1248,26 @@ animation-delay: 10s;
     height: 100px;
     left: 0;
     top: 0;
+    z-index: 0;
     background-image: url('images/sun.png');
     background-size: cover;
     position: absolute;
-    animation: sol 38s linear forwards;
+    animation: sol 45s linear forwards;
   
    
 }
 @keyframes sol {
     0%{
-        top:10%;
+        top:25%;
         left:20%;
     }
     60%{
-        top:10%;
+        top:25%;
         left: 15%;
 
     }
     100%{
-        top: 70%;
+        top: 100%;
         left: 15%;
     }
 
@@ -1414,7 +1447,7 @@ animation-delay: 10s;
     position: absolute;
     bottom: 30px;
     right: 10%;
-    z-index: 98;
+    z-index: 400;
     animation: coheteY 10s 5s ease-in-out forwards;
 }
 @keyframes coheteX {
@@ -1469,9 +1502,11 @@ animation-delay: 10s;
     border-radius: 50%;
     /* background-color: #e91ed8;
     border: 1px solid white; */
-    animation: pelotaX 20s 30s ease-in-out forwards ;
+    animation: pelotaX 20s  ease-in-out forwards;
     z-index: 123;
     left: -100px;
+    top: 29%;
+   
    
 }
 
@@ -1481,10 +1516,9 @@ animation-delay: 10s;
     height: 72px;
     position: absolute;
     background:url('images/ovnispt2.png');
-    
     border: 0px solid white;
-    animation: ovnispt 3s steps(5) infinite, pelotaY 20s 30s ease-in-out forwards;
-    top: 200px;
+    animation: ovnispt 3s steps(5) infinite, pelotaY 20s  ease-in-out forwards ;
+    
     left: -100px;
     z-index: 123;
 
@@ -1566,7 +1600,7 @@ animation-delay: 10s;
     /* clip-path: polygon(38% 0, 59% 0, 59% 0, 37% 0); */
     clip-path: polygon(38% 0, 59% 0, 100% 100%, 0 100%);
         /* clip-path: polygon(30% 0%, 60% 0%, 100% 99.4%, 90% 99.5%, 80% 99.6%, 70% 99.7%, 60% 99.8%, 50% 99.8%, 40% 99.7%, 30% 99.6%, 20% 99.5%,10% 99.4%,0% 99.3%); */
-    animation: rayo 12s 52s linear forwards;
+    animation: rayo 12s 22s linear forwards;
     background: rgb(230, 226, 7,.5);
     position: absolute;
     left: 740px;
@@ -1601,9 +1635,9 @@ animation-delay: 10s;
     clip-path: ellipse(50% 8% at 50% 51%);
     position: absolute;
     left: 740px;
-    top: 860px;
+    bottom: 4.7%;
     z-index: 113;
-    animation : elipse 12s 52s linear; 
+    animation : elipse 12s 22s linear; 
     transform: scale(0);
 } 
 
@@ -1634,6 +1668,8 @@ animation-delay: 10s;
     animation: bat 1s steps(9) infinite, batm 20s 40s linear forwards;
     transform: scale(.1);
     bottom: 0px;
+    z-index: 2;
+    right: -10%;
   
    
 }
@@ -1696,7 +1732,7 @@ animation-delay: 10s;
     right: -100px;
     bottom: 35px;
     position: absolute;
-    z-index: 96 ;
+    z-index: 409 ;
     
    
 }
@@ -1768,16 +1804,19 @@ animation-delay: 10s;
        bottom:-5px;
     }
 
+    88%{
+        opacity: 1;
+    }
+
     90%{
         transform: rotate(1080deg)scale(.3);
         bottom:545px;
         left:760px;
+        opacity: 0;
 
     }
 
-    99%{
-        opacity: 1;
-    }
+ 
     100% {
         transform: rotate(1080deg)scale(.3);
         bottom:545px;
@@ -1786,6 +1825,24 @@ animation-delay: 10s;
     }
 }
 
+
+@media (max-width: 1300px){
+    .nube2 {
+        bottom: 10%;
+    }
+} 
+
+@media (max-width: 960px){
+    .nube2 {
+        bottom: 5%;
+    }
+} 
+
+@media (max-width: 500px){
+    .nube2 {
+        bottom: 25px;
+    }
+} 
 
  /*
 @keyframes personados {
