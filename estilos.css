@@ -1502,7 +1502,7 @@ animation-delay: 10s;
     border-radius: 50%;
     /* background-color: #e91ed8;
     border: 1px solid white; */
-    animation: pelotaX 20s  ease-in-out forwards;
+    animation: pelotaX 20s 30s  ease-in-out forwards;
     z-index: 123;
     left: -100px;
     top: 29%;
@@ -1517,7 +1517,7 @@ animation-delay: 10s;
     position: absolute;
     background:url('images/ovnispt2.png');
     border: 0px solid white;
-    animation: ovnispt 3s steps(5) infinite, pelotaY 20s  ease-in-out forwards ;
+    animation: ovnispt 3s steps(5) infinite, pelotaY 20s 30s  ease-in-out forwards ;
     
     left: -100px;
     z-index: 123;
@@ -1537,16 +1537,19 @@ animation-delay: 10s;
 
 @keyframes pelotaX {
     0%{
-        transform: translateX(100px);
+        /* transform: translateX(100px); */
+        left: 0%;
     }
     
  
     50%{
-        transform: translateX(1900px);
+        /* transform: translateX(1900px); */
+        left: 99%;
     }
 
     100%{
-        transform: translateX(966px); 
+        /* transform: translateX(966px);  */
+        left:45.1%;
     }
 }
 
@@ -1600,13 +1603,14 @@ animation-delay: 10s;
     /* clip-path: polygon(38% 0, 59% 0, 59% 0, 37% 0); */
     clip-path: polygon(38% 0, 59% 0, 100% 100%, 0 100%);
         /* clip-path: polygon(30% 0%, 60% 0%, 100% 99.4%, 90% 99.5%, 80% 99.6%, 70% 99.7%, 60% 99.8%, 50% 99.8%, 40% 99.7%, 30% 99.6%, 20% 99.5%,10% 99.4%,0% 99.3%); */
-    animation: rayo 12s 22s linear forwards;
+    animation: rayo 12s 52s linear forwards ;
     background: rgb(230, 226, 7,.5);
     position: absolute;
-    left: 740px;
+    left: 38.5%;
     top: 32.8%;
     z-index: 122;
     opacity: 0;
+    
 }
 @keyframes rayo {
     0%{
@@ -1634,10 +1638,10 @@ animation-delay: 10s;
     background: #fffb08;
     clip-path: ellipse(50% 8% at 50% 51%);
     position: absolute;
-    left: 740px;
+    left: 38.5%;
     bottom: 4.7%;
     z-index: 113;
-    animation : elipse 12s 22s linear; 
+    animation : elipse 12s 52s linear forwards; 
     transform: scale(0);
 } 
 
@@ -1825,10 +1829,29 @@ animation-delay: 10s;
     }
 }
 
+@media (max-width: 1680px){
+    .rayo {
+        left: 37.6%;
+    }
+} 
 
-@media (max-width: 1300px){
+@media (max-width: 1440px){
+    .rayo {
+        left: 36.2%;
+    }
+} 
+@media (max-width: 1366px){
+    .rayo{
+        left: 35.8%;
+    }
+}
+
+@media (max-width: 1280px){
     .nube2 {
         bottom: 10%;
+    }
+    .rayo{
+        left: 35.2%;
     }
 } 
 
@@ -1836,12 +1859,49 @@ animation-delay: 10s;
     .nube2 {
         bottom: 5%;
     }
+    .rayo {
+        left: 32%;
+    }
+}
+
+@media (max-width: 800px){
+    .rayo {
+        left: 29.3%;
+    }
+} 
+
+
+
+@media (max-width: 720px){
+    .rayo {
+        left: 27.5%;
+    }
+} 
+
+@media (max-width: 600px){
+    .rayo {
+        left: 24.1%;
+    }
 } 
 
 @media (max-width: 500px){
     .nube2 {
         bottom: 25px;
     }
+    .rayo {
+        left: 19.8%;
+        transform: scale(.5);
+        height: 116.5%;
+        top: 10%;
+        
+    }
+    .elipse{
+        left: 19.8%;
+        transform: scale(.5);
+        bottom: -1.2%;
+
+    }
+  
 } 
 
  /*
