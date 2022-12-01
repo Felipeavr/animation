@@ -522,7 +522,8 @@ h1 {
     top: 10%;
     left: 110%;
     transform: scale(1);
-     animation: pajaro 60s linear forwards;
+    animation: pajaro 50s linear forwards;
+   
     
     z-index: 99;
 
@@ -567,7 +568,8 @@ z-index: 20;
     0%{
        transform: rotate(0deg);
        transform: scale(0);
-       left: 80%;
+       left: 100%;
+      
       
     }
    
