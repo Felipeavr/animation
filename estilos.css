@@ -652,13 +652,12 @@ z-index: 20;
     width: 100%;
     height: 100%;
     position:absolute;
-    /* background-color: #fffb08; */
     background-image: url('images/nube2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position:center;
     animation: nube2 70s linear forwards;
-    bottom: 15%;
+    bottom: -40%;
     z-index: 1;
     
 }
