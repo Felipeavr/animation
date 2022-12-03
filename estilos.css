@@ -577,7 +577,7 @@ z-index: 20;
     100% {
         transform: rotate(0deg);
         transform: scale(1);
-        left: -10%;
+        left: -50%;
         top: 10%;
        
      }
@@ -1072,14 +1072,14 @@ animation-delay: 10s;
 @keyframes humo1 {
     from{
         background-position: 1200px;
-        right: 25.5%;
+        right: 25%;
         bottom:1%;
 
     }
     
     to{
         background-position: 0px;
-        right: 25.5%;
+        right: 25%;
         bottom:1%;
         transform: scale(2);
     }
@@ -1435,7 +1435,7 @@ animation-delay: 10s;
     width: 50px;
     height: 115px;
     position: absolute;
-    bottom: 30px;
+    bottom: 5%;
     right: 10%;
     animation: coheteX 10s 5s forwards ;
   
@@ -1447,7 +1447,7 @@ animation-delay: 10s;
     background: url('images/cohete2.png');
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 30px;
+    bottom:4%;
     right: 10%;
     z-index: 400;
     animation: coheteY 10s 5s ease-in-out forwards;
@@ -1473,7 +1473,7 @@ animation-delay: 10s;
 }
 @keyframes coheteY {
     0% {
-        bottom:30px;
+        bottom:4%;
     }
     20%{
         transform: rotate(0deg); 
@@ -1488,7 +1488,7 @@ animation-delay: 10s;
         opacity: 1;
     }
     100% {
-        bottom:10px;
+        bottom:4%;
         transform: rotate(-180deg);
         opacity: 0;
 
@@ -1645,6 +1645,7 @@ animation-delay: 10s;
     z-index: 113;
     animation : elipse 12s 52s linear forwards; 
     transform: scale(0);
+    opacity: 0;
 } 
 
 @keyframes elipse{
@@ -1673,7 +1674,7 @@ animation-delay: 10s;
     background: url('images/animacion/murcielago.png');
     animation: bat 1s steps(9) infinite, batm 20s 40s linear forwards;
     transform: scale(.1);
-    bottom: 0px;
+    bottom: -25%;
     z-index: 2;
     right: -10%;
   
@@ -1715,7 +1716,7 @@ animation-delay: 10s;
     background-image: url('images/sombra.png');
     animation: sombra 2.5s 5s linear forwards;
     right: 10.2%;
-    bottom: 53px;
+    bottom: 5%;
     position: absolute;
     z-index: 97 ;
    
@@ -1735,8 +1736,8 @@ animation-delay: 10s;
     height: 16px;
     background: url('images/sombra.png');
     animation: sombra2 3s 12s linear;
-    right: -100px;
-    bottom: 35px;
+    opacity: 0;
+    bottom: 4.2%;
     position: absolute;
     z-index: 409 ;
     
@@ -1747,11 +1748,19 @@ animation-delay: 10s;
         transform: scale(0);
         right: 30%;
         bottom: 50px;
+        opacity: 1;
        
     }
+    90%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
     100%{
         transform: scale(1);
         right: 30%;
+        opacity:1 ;
+        
   
        
     }
