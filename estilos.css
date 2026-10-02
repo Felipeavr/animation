@@ -1703,7 +1703,7 @@ animation-delay: 10s;
     } 
     100%{
         transform:scale(.7) rotate(0);
-        bottom: 900px;
+        bottom: 1000px;
         left: 55%;       
     }
 
